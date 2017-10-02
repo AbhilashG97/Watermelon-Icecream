@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+	<project name="Generics" default="info" basedir="/home/abhilashg/Practice/Java_Practice/Miscellaneous/Generics">
+	<property file="build.properties"/>
+	<target name="info" description="This is a hello world program" depends="Bye">
+		<echo>${hello} I am using ${ant.version}</echo>
+	</target>
+	<target name="Bye" description="Bye Bye world">
+		<echo>${bye-bye}</echo>
+	</target>
+</project>
