@@ -1,17 +1,17 @@
-class jack {
-    void nosy(){
+class Jack {
+    public void nosy(){
         System.out.println("This is the parent class.");
     }
 }
 
-class cat extends jack {
-    void nosy(){
+public class Cat extends Jack {
+    public void nosy(){
         super.nosy();
         System.out.println("This is the child class");
     }
 
     public static void main(String[] args){
-        jack j = new cat();
+        Jack j = new Cat();
         j.nosy();
     }
 }
