@@ -28,8 +28,18 @@ public class Test {
 		// Watermelon w = new Watermelon();
 		// w.calculate();
 
-		ReadInput ri = new ReadInput(bfr.readLine());
-		ri.readData();
+		// ReadInput ri = new ReadInput(bfr.readLine());
+		// ri.readData();
 
+		// ReadFromUser rfu = new ReadFromUser("poltergeist.txt", "ghost.txt");
+		// rfu.readFromUser();
+		// rfu.writeToFile();
+		// rfu.closeAll();
+
+		ReadFromUserChar rfuc = new ReadFromUserChar();
+		rfuc.readFromUser();
+		rfuc.writeToFile();
+		rfuc.readAndWriteFromFile();
+		rfuc.closeAll();
 	}
 }

@@ -1,0 +1,41 @@
+ Volume in drive E is New Volume
+ Volume Serial Number is 46CF-3414
+
+ Directory of E:\Academics\Java_Practice\watermelon-icecream\JavaIO
+
+11/10/2017  10:55 AM    <DIR>          .
+11/10/2017  10:55 AM    <DIR>          ..
+03/10/2017  11:08 PM               753 CharReaderAndWriter.java
+03/10/2017  11:08 PM               693 Check.java
+03/10/2017  11:08 PM                 0 damasu.txt
+03/10/2017  11:08 PM               462 error.txt
+03/10/2017  11:12 PM                12 Famasu.txt
+03/10/2017  11:08 PM               582 Harp.java
+03/10/2017  11:08 PM               165 InvalidAgeException.java
+03/10/2017  11:08 PM                 0 jangali.txt
+03/10/2017  11:08 PM             1,059 Lama.java
+03/10/2017  11:08 PM               634 LineIO.java
+03/10/2017  11:08 PM               156 lineOutput
+03/10/2017  11:08 PM                 4 mama.txt
+03/10/2017  11:08 PM                 4 mamasu.txt
+03/10/2017  11:08 PM                 0 myOutputFile.txt
+03/10/2017  11:08 PM               743 MyProg.java
+03/10/2017  11:08 PM               156 output.txt
+03/10/2017  11:08 PM                 0 outputInteger.txt
+11/10/2017  10:55 AM                 0 poltergeist.txt
+03/10/2017  11:08 PM               672 Prac.java
+03/10/2017  11:08 PM               712 ReadAndWrite.java
+11/10/2017  10:51 AM             1,270 ReadFromUser.class
+11/10/2017  10:51 AM               833 ReadFromUser.java
+11/10/2017  10:52 AM               891 ReadInput.class
+03/10/2017  11:08 PM               493 ReadInput.java
+03/10/2017  11:08 PM                28 Tarbooj.java
+11/10/2017  10:54 AM               728 Test.class
+11/10/2017  10:54 AM             1,182 Test.java
+03/10/2017  11:08 PM               357 TestThrow1.java
+03/10/2017  11:08 PM               873 Watermelon.java
+03/10/2017  11:08 PM               156 xanadu.txt
+03/10/2017  11:08 PM                33 zamafu.txt
+              31 File(s)         13,651 bytes
+               2 Dir(s)  91,261,087,744 bytes free
+Hello I am HitManMy name is Abhilash and I love watermelon. I also love watermelon ice-cream. Apaart from that I also loe to type annything that comes to my mind. What about you?
