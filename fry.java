@@ -1,24 +1,24 @@
-class smallfry{
+class Smallfry{
     void m(){
         System.out.println("I am a small fry.");
     }
 }
 
-class bigfry extends smallfry {
+class Bigfry extends Smallfry {
     void n() {
         System.out.println("I am a big fry.");
     }
 }
 
-class uglyfry extends bigfry {
+class Uglyfry extends Bigfry {
     void a(){
     System.out.println("I am an ugly fry.");
     }
 }
 
-class fry{
+class Fry{
     public static void main(String args[]){
-        uglyfry f = new uglyfry();
+        Uglyfry f = new Uglyfry();
         f.n();
         f.m();
         f.a();

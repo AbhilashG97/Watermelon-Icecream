@@ -2,13 +2,13 @@ interface kerei {
     void pretty();
 }
 
-class fax implements kerei {
+class Fax implements Kerei {
     public void pretty(){
         System.out.println("This is a pretty picture.");
     }
 
     public static void main(String[] args){
-        kerei k = new fax();
+        kerei k = new Fax();
         k.pretty();
     }
 }
