@@ -1,4 +1,4 @@
-class liu {
+class Liu {
     
     liu() {
         System.out.println("I am happy.");
@@ -8,7 +8,7 @@ class liu {
         }
     }
 
-class gou extends liu {
+class Gou extends Liu {
     
     String name;
     gou(String name) {
@@ -36,8 +36,8 @@ class gou extends liu {
         System.out.println("I am a static block and I will be invoked first.");
     }
     public static void main(String []args){
-        gou g = new gou("Louese");
-        gou f = new gou("O+", 105);
+        Gou g = new Gou("Louese");
+        Gou f = new Gou("O+", 105);
         g.fit(23, 45);
     }
 }

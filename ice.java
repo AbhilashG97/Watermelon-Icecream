@@ -1,11 +1,11 @@
-class hot{
+class Hot{
     int x = 4500;
 }
 
-class ice extends hot {
+class Ice extends Hot {
     int y = 345;
     public static void main(String args[]){
-        ice i = new ice();
+        Ice i = new Ice();
         System.out.println(i.x + " " + i.y);
     }
 }

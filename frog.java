@@ -1,4 +1,4 @@
-public class frog {
+public class Frog {
     public static void main(String[] args){
       try{
       System.out.println("You entered "+ args[0]);

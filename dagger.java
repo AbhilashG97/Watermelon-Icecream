@@ -6,7 +6,7 @@ interface desert {
     String desertName(String y);
 }
 
-class dagger implements desert, fruit {
+class Dagger implements desert, fruit {
     @Override
     public String fruitName(String x){
         return x;
@@ -17,9 +17,9 @@ class dagger implements desert, fruit {
     }
 
     public static void main(String args[]){
-        fruit f = new dagger(); 
+        fruit f = new Dagger();
         System.out.println(f.fruitName("Mango"));
-        desert d = new dagger();
+        desert d = new Dagger();
         System.out.println(d.desertName("Baked Alaska"));
     }
 }

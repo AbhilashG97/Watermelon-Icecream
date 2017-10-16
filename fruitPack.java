@@ -1,6 +1,6 @@
 package fruit_pack;
 
-public class fruitPack{
+public class Fruitpack{
     public String fruitName;
 
     public void setName(String friutName){

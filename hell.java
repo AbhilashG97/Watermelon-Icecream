@@ -1,4 +1,4 @@
-interface jack {
+interface Jack {
     void pimp();
 
     static String gif(String x){
@@ -11,7 +11,7 @@ interface jack {
     }
 }
 
-abstract class july implements jack {
+abstract class July implements Jack {
     @Override 
     public void pimp(){
         System.out.println("That is a suspicious person. Be carefull.");
@@ -20,15 +20,15 @@ abstract class july implements jack {
     abstract void sam();
 }
 
-class hell extends july {
+class hell extends July {
     @Override
     void sam(){
         super.pimp();
         System.out.println("I am Sam. I am glad to have met you.");
     }
     public static void main(String[] args){
-        jack j = new hell();
-        hell h = new hell();
+        Jack j = new Hell();
+        Hell h = new Hell();
         System.out.println(jack.gif("Susan") + " is so beautiful.");
         j.pimp();
         System.out.println(j.getName("Lucy")+" ooks suspicious.");

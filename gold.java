@@ -1,9 +1,9 @@
-class gold {
+class Gold {
     int roll;
     String name;
     static String college = "Oxford";
 
-    gold(int roll, String name){
+    Gold(int roll, String name){
         this.roll = roll;
         this.name = name;
     }
@@ -13,7 +13,7 @@ class gold {
     }
 
     public static void main(String[] args){
-        gold s1 = new gold(123, "Julius"), s2 = new gold(456, "Max");
+        gold s1 = new Gold(123, "Julius"), s2 = new Gold(456, "Max");
         s1.display();
         s2.display();
     }
