@@ -1,6 +1,6 @@
 import missy.wail;
 
-class yale {
+class Yale {
     public static void main(String []args){
     wail j = new wail();
     j.york();
