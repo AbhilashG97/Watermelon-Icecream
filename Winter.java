@@ -6,7 +6,7 @@ interface of {
     void seasonName(String x, int y);
 }
 
-class winter implements of, Thrones {
+class Winter implements of, Thrones {
     public void seasonName(String x, int y){
         System.out.println(x + y);
     }
