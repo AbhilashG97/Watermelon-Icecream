@@ -22,7 +22,7 @@ class SBI extends bank {
     }
 }
 
-class ram {
+class Ram {
     public static void main(String[] args){
         bank b;  
         b=new SBI();  
