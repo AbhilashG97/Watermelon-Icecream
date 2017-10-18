@@ -1,6 +1,6 @@
 package fish;
 
-public class tuna {
+public class Tuna {
     public void goose(){
         System.out.println("Don't hide near the goose.");
     }
