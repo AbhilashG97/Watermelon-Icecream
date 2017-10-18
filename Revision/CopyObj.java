@@ -1,45 +1,46 @@
 public class CopyObj {
-	private String name;
-	private int roll;
-	private static String className;
+    private static String className;
 
-	public CopyObj(int roll, String name, String className){
-		this();
-		this.roll = roll;
-		this.className = className;
-		this.name = name;
-	}
+    static {
+        System.out.println("This is a static block.");
+    }
 
-	public CopyObj(){
-		System.out.println("This is a default constructor.");
-	}
+    private String name;
+    private int roll;
 
-	CopyObj(String name){
-		this.name = name;
-		System.out.println(name);
-	}
+    public CopyObj(int roll, String name, String className) {
+        this();
+        this.roll = roll;
+        this.className = className;
+        this.name = name;
+    }
 
-	public void display(){
-		System.out.println("name : "+name+" Roll : "+roll+" Class name : "+className);
-	}
+    public CopyObj() {
+        System.out.println("This is a default constructor.");
+    }
 
-	static public void myName(){
-		className = "S7";
-	}
+    CopyObj(String name) {
+        this.name = name;
+        System.out.println(name);
+    }
 
-	public void yourName(){
-		myName();
-		className = "S8";
-		myName();
-	}
+    static public void myName() {
+        className = "S7";
+    }
 
-	static {
-		System.out.println("This is a static block.");
-	}
+    public static void main(String[] args) {
+        CopyObj obj = new CopyObj(123, "Kali", "S3");
 
-	public static void main(String[] args) {
-		CopyObj obj = new CopyObj(123, "Kali", "S3");
+        obj.display();
+    }
 
-		obj.display();
-	}
+    public void display() {
+        System.out.println("name : " + name + " Roll : " + roll + " Class name : " + className);
+    }
+
+    public void yourName() {
+        myName();
+        className = "S8";
+        myName();
+    }
 }

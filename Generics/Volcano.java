@@ -1,33 +1,33 @@
 public class Volcano {
 
-public interface Lava <T, U> {
-	
-	public void setVar(T t, U u);
+    Lava<Integer, String> lava = new Lava<Integer, String>() {
 
-	public T getFirstVar();
+        private Integer t;
+        private String u;
 
-	public U getSecondVar();
+        public void setVar(Integer t, String u) {
+            this.t = t;
+            this.u = u;
+        }
 
-}
+        public Integer getFirstVar() {
+            return t;
+        }
 
-Lava<Integer, String> lava = new Lava<Integer, String>(){
+        public String getSecondVar() {
+            return u;
+        }
+    };
 
-	private Integer t;
-	private String u;
+    public interface Lava<T, U> {
 
-	public void setVar(Integer t, String u){
-		this.t=t;
-		this.u=u;
-	}
+        public void setVar(T t, U u);
 
-	public Integer getFirstVar(){
-		return t;
-	}
+        public T getFirstVar();
 
-	public String getSecondVar(){
-		return u;
-		}
-	};
+        public U getSecondVar();
+
+    }
 }
 
 

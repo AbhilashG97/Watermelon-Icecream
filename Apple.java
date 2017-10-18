@@ -1,12 +1,14 @@
-class Jack{
+class Jack {
     String name;
     int roll;
-    void insertVal(String name, int roll){
-    this.name = name;
-    this.roll = roll;
+
+    void insertVal(String name, int roll) {
+        this.name = name;
+        this.roll = roll;
+    }
 }
-}
-class Apple{
+
+class Apple {
     public static void main(String[] args) {
         Jack ja = new Jack();
         ja.insertVal("jack", 16002);

@@ -1,11 +1,11 @@
 public class Alpha {
-	private int n;
-	
-	public Alpha(int initialValue){
-		n = initialValue;
-	}
+    private int n;
 
-	public void a(){
-		System.out.println("Alpha a");
-	}
+    public Alpha(int initialValue) {
+        n = initialValue;
+    }
+
+    public void a() {
+        System.out.println("Alpha a");
+    }
 }
