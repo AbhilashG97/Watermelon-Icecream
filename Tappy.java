@@ -1,49 +1,50 @@
 interface Jill {
-	String getName();
+    String getName();
 
-	int getRoll();
+    int getRoll();
 
-	String getBranch();
+    String getBranch();
 }
 
 abstract class Jack implements Jill {
 
-	protected String name;
-	protected int roll;
-	protected String branch;
+    protected String name;
+    protected int roll;
+    protected String branch;
 
-	public Jack(String name, String branch, int roll){
-		this.name = name;
-		this.branch = branch;
-		this.roll = roll;
-	}
+    public Jack(String name, String branch, int roll) {
+        this.name = name;
+        this.branch = branch;
+        this.roll = roll;
+    }
 
-	public String getBranch(){
-		return name;
-	}
+    public String getBranch() {
+        return name;
+    }
 
-	public int getRoll(){
-		return roll;
-	}
+    public int getRoll() {
+        return roll;
+    }
 
-	public String getName(){
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 }
 
 public class Tappy extends Jack {
 
-	public String getBranch(){
-		System.out.println("Branch : ");
-		return name;
-	}
+    public static void main(String[] args) {
+        Tappy j = new Jack("Jummy", "CSE", 16999);
+        System.out.println(j.getName());
+    }
 
-	public int getRoll(){
-		System.out.println("Roll : ");
-		return roll;
-	}
-	public static void main(String[] args){
-		Tappy j = new Jack("Jummy", "CSE", 16999);
-		System.out.println(j.getName());
-	}
+    public String getBranch() {
+        System.out.println("Branch : ");
+        return name;
+    }
+
+    public int getRoll() {
+        System.out.println("Roll : ");
+        return roll;
+    }
 }

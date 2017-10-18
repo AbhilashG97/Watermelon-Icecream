@@ -1,5 +1,5 @@
-class Smallfry{
-    void m(){
+class Smallfry {
+    void m() {
         System.out.println("I am a small fry.");
     }
 }
@@ -11,13 +11,13 @@ class Bigfry extends Smallfry {
 }
 
 class Uglyfry extends Bigfry {
-    void a(){
-    System.out.println("I am an ugly fry.");
+    void a() {
+        System.out.println("I am an ugly fry.");
     }
 }
 
-class Fry{
-    public static void main(String args[]){
+class Fry {
+    public static void main(String args[]) {
         Uglyfry f = new Uglyfry();
         f.n();
         f.m();

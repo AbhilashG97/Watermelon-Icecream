@@ -1,5 +1,5 @@
 public class RacoonException extends Exception {
-	public RacoonException(String msg){
-		super(msg);
-	}
+    public RacoonException(String msg) {
+        super(msg);
+    }
 }

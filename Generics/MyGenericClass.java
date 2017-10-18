@@ -1,33 +1,31 @@
-import java.io.*;
-import java.util.Scanner;
-
 public class MyGenericClass<A, B> {
-	private A a;
-	private B b;
-	private A[] arr;
-	public MyGenericClass(A a, B b, int size){
-		this.a = a;
-		this.b = b;
-		arr = (A[]) new Object[size];
-	}
+    private A a;
+    private B b;
+    private A[] arr;
 
-	public void setArray(A data, int pos){
-		arr[pos] = data;
-	}
+    public MyGenericClass(A a, B b, int size) {
+        this.a = a;
+        this.b = b;
+        arr = (A[]) new Object[size];
+    }
 
-	/**@param position 
-	  *	
-	  */
+    public void setArray(A data, int pos) {
+        arr[pos] = data;
+    }
 
-	public <T extends Number> void addValues(T[] array, int position, T value){
-		array[position] = value;
-	}
+    /**
+     * @param position
+     */
 
-	public A getA(){
-		return a;
-	}
+    public <T extends Number> void addValues(T[] array, int position, T value) {
+        array[position] = value;
+    }
 
-	public B getB(){
-		return b;
-	}
+    public A getA() {
+        return a;
+    }
+
+    public B getB() {
+        return b;
+    }
 }

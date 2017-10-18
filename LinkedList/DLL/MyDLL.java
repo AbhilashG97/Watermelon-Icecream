@@ -1,106 +1,105 @@
-import java.io.*;
 import java.util.Scanner;
 
 public class MyDLL {
-	
-	Node head;
-	
-	public static class Node {
-		Node prev, next;
-		int data;
-		Node(int data){
-			this.data = data;
-			prev = null;
-			next = null;
-		}
-	}
 
-	public void push(int data){
-		Node node = new Node(data);
-		node.prev = null;
-		node.next = head;
-		if(head!=null){
-			head.prev = node;
-		}
-		head = node;
-	}
+    Node head;
 
-	public void insertAfter(Node prevNode, int data) throws IOException{
-		
-		if(prevNode == null){
-			throw new IOException("prevNode cannot be empty.");
-		}
+    public static void main(String[] args) throws IOException {
+        MyDLL dll = new MyDLL();
+        try (Scanner s = new Scanner(System.in)) {
+            dll.append(s.nextInt());
+        }
+    }
 
-		Node node = new Node(data);
-		node.next = prevNode.next;
-		prevNode.next = node;
-		node.prev = prevNode;
+    public void push(int data) {
+        Node node = new Node(data);
+        node.prev = null;
+        node.next = head;
+        if (head != null) {
+            head.prev = node;
+        }
+        head = node;
+    }
 
-		if(node!=null){
-			node.next.prev = node;
-		}
-	}
+    public void insertAfter(Node prevNode, int data) throws IOException {
 
-	public void append(int data){
-		Node node = new Node(data);
-		node.next = null;
+        if (prevNode == null) {
+            throw new IOException("prevNode cannot be empty.");
+        }
 
-		if(head==null){
-			node.prev = null;
-			head = node;
-			return;
-		}
-		Node last = head;
-		while(last.next!=null){
-			last = last.next;
-		}
+        Node node = new Node(data);
+        node.next = prevNode.next;
+        prevNode.next = node;
+        node.prev = prevNode;
 
-		last.next = node;
-		node.prev = last;
-	}
+        if (node != null) {
+            node.next.prev = node;
+        }
+    }
 
-	public void deleteNode(Node head, Node del) throws IOException{
-		if(head == null){
-			throw new IOException("Head cannot be null");
-		}
+    public void append(int data) {
+        Node node = new Node(data);
+        node.next = null;
 
-		if(del == head){
-			head = del.next;
-		}
+        if (head == null) {
+            node.prev = null;
+            head = node;
+            return;
+        }
+        Node last = head;
+        while (last.next != null) {
+            last = last.next;
+        }
 
-		if(del.next!=null){
-			del.next.prev = del.prev;
-		}
+        last.next = node;
+        node.prev = last;
+    }
 
-		if(del.prev!=null){
-			del.prev.next = del.next;
-		}
-	}
+    public void deleteNode(Node head, Node del) throws IOException {
+        if (head == null) {
+            throw new IOException("Head cannot be null");
+        }
 
-	public Node getReverse(Node head) throws IOException{
-		if(head==null){
-			throw new IOException("Head cannot be null");
-		}
-		Node temp=null;
-		Node curr = head;
+        if (del == head) {
+            head = del.next;
+        }
 
-		while(curr!=null){
-			temp = curr.prev;
-			curr.prev = curr.next;
-			curr.next = temp;
-			curr = curr.prev;
-		}
+        if (del.next != null) {
+            del.next.prev = del.prev;
+        }
 
-		if(temp!=null){
-			head = temp.prev;
-		}
-	}
+        if (del.prev != null) {
+            del.prev.next = del.next;
+        }
+    }
 
+    public Node getReverse(Node head) throws IOException {
+        if (head == null) {
+            throw new IOException("Head cannot be null");
+        }
+        Node temp = null;
+        Node curr = head;
 
-	public static void main(String[] args) throws IOException{
-		MyDLL dll = new MyDLL();
-		try(Scanner s = new Scanner(System.in)){
-			dll.append(s.nextInt());
-		}
-	}
+        while (curr != null) {
+            temp = curr.prev;
+            curr.prev = curr.next;
+            curr.next = temp;
+            curr = curr.prev;
+        }
+
+        if (temp != null) {
+            head = temp.prev;
+        }
+    }
+
+    public static class Node {
+        Node prev, next;
+        int data;
+
+        Node(int data) {
+            this.data = data;
+            prev = null;
+            next = null;
+        }
+    }
 }
