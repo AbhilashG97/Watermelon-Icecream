@@ -1,10 +1,10 @@
-class red {
+class Red {
     public void m(){
     System.out.println("This is red.");
     }
 }
 
-class green extends red {
+class Green extends red {
     void n(){
     System.out.println("This is green.");
     green f = new green();
@@ -12,13 +12,13 @@ class green extends red {
     }
 }
 
-class blue extends red {
+class Blue extends red {
     void f(int y) {
         System.out.println("This is blue and "+y);
     }
 }
 
-class white {
+class White {
     public static void main(String []args){
         blue b = new blue();
         green g = new green();

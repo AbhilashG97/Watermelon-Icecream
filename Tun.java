@@ -1,6 +1,6 @@
-import fish.tuna;
+import fish.Tuna;
 
-class tun extends tuna {
+class Tun extends Tuna {
 
     @Override 
     public void geese(){
