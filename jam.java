@@ -1,4 +1,4 @@
-class product {
+class Product {
     int id;
     int price;
     String pName;
@@ -10,7 +10,7 @@ class product {
     }
 }
 
-class jamun {
+class Jamun {
     String madeOn;
     int expiry;
     product pro;
@@ -28,7 +28,7 @@ class jamun {
 
 }
 
-class jam{
+class Jam{
     public static void main(String[] args){
         product p = new product(2323, 23, "Jack");
         jamun j = new jamun("January", 3, p);

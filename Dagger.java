@@ -1,8 +1,8 @@
-interface fruit {
+interface Fruit {
     String fruitName(String x);  
 }
 
-interface desert {
+interface Desert {
     String desertName(String y);
 }
 
