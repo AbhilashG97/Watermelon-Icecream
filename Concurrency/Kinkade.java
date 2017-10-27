@@ -1,6 +1,6 @@
 
 
-public class kinkade {
+public class Kinkade {
 
 
 
