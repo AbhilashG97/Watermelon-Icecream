@@ -31,5 +31,4 @@ public class ReadFromUser {
 		readInput.close();
 		writeOutput.close();
 	}
-
 }
