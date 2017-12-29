@@ -1,4 +1,4 @@
-interface kerei {
+interface Kerei {
     void pretty();
 }
 
