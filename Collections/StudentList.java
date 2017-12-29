@@ -4,8 +4,9 @@ public class StudentList{
 
 	private ArrayList<Student> studentList;
 
-	public StudentList(){
+	public StudentList(Student student){
 		studentList = new ArrayList<>();
+		student.add(student);
 	}
 
 	public static void main(String[] args) {
