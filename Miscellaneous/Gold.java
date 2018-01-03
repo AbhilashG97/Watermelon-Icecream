@@ -1,20 +1,20 @@
 class Gold {
-    int roll;
-    String name;
-    static String college = "Oxford";
+    private int rollNumber;
+    private String name;
+    private static String college = "Oxford";
 
-    Gold(int roll, String name){
-        this.roll = roll;
+    Gold(int rollNumber, String name){
+        this.rollNumber = rollNumber;
         this.name = name;
     }
 
     void display(){
-        System.out.println(roll+" "+name+" "+college);
+        System.out.println(rollNumber+" "+name+" "+college);
     }
 
     public static void main(String[] args){
-        gold s1 = new Gold(123, "Julius"), s2 = new Gold(456, "Max");
-        s1.display();
-        s2.display();
+        Gold gold = new Gold(123, "Julius"), silver = new Gold(456, "Max");
+        gold.display();
+        silver.display();
     }
 }

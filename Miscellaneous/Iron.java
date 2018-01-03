@@ -29,10 +29,9 @@ class Customer {
     }
 }
 
-class iron {
+class Iron {
     public static void main(String []args){
-        Address ad1 = new Address(226001, "Uttar Pradesh", "LKO");
-        Customer ct1 = new Customer(12334, "Jack", ad1);
-        ct1.display();
+        Customer customer = new Customer(12334, "Jack", new Address(226001, "Uttar Pradesh", "LKO"));
+        customer.display();
     }
 }

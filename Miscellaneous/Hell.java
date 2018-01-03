@@ -20,18 +20,18 @@ abstract class July implements Jack {
     abstract void sam();
 }
 
-class hell extends July {
+class Hell extends July {
     @Override
     void sam(){
         super.pimp();
         System.out.println("I am Sam. I am glad to have met you.");
     }
     public static void main(String[] args){
-        Jack j = new Hell();
-        Hell h = new Hell();
+        Jack jack = new Hell();
+        Hell hell = new Hell();
         System.out.println(jack.gif("Susan") + " is so beautiful.");
-        j.pimp();
+        jack.pimp();
         System.out.println(j.getName("Lucy")+" ooks suspicious.");
-        h.sam();
+        hell.sam();
     }
 }

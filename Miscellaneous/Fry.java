@@ -18,9 +18,9 @@ class Uglyfry extends Bigfry {
 
 class Fry{
     public static void main(String args[]){
-        Uglyfry f = new Uglyfry();
-        f.n();
-        f.m();
-        f.a();
+        Uglyfry uglyFry = new Uglyfry();
+        uglyFry.n();
+        uglyFry.m();
+        uglyFry.a();
     }
 }

@@ -1,9 +1,9 @@
-import fruit_pack.fruitPack;;
+import fruitPack.fruitPack;
 
 class Guts {
     public static void main(String[] args){
-        FruitPack g = new FruitPack();
-        g.setName("Jack");
-        System.out.println("The name entered is :"+g.getName);
+        FruitPack fruitPack = new FruitPack();
+        fruitPack.setName("Jack");
+        System.out.println("The name entered is :"+fruitPack.getName);
     }
 }

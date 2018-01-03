@@ -1,17 +1,17 @@
-package fruit_pack;
+package fruitPack;
 
 public class Fruitpack{
-    public String fruitName;
+    private String fruitName;
 
-    public void setName(String friutName){
-        this.fruitName = friutName;
+    public void setName(String fruitName){
+        this.fruitName = fruitName;
     }
 
     public String getName(){
-        return this.fruitName;
+        return fruitName;
     }
 
     public static void main(String[] args){
-        // Main 
+        // Main thread 
     }
 }

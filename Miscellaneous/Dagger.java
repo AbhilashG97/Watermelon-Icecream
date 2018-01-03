@@ -1,12 +1,12 @@
-interface fruit {
+interface Fruit {
     String fruitName(String x);  
 }
 
-interface desert {
+interface Desert {
     String desertName(String y);
 }
 
-class Dagger implements desert, fruit {
+class Dagger implements Desert, Fruit {
     @Override
     public String fruitName(String x){
         return x;
@@ -17,9 +17,9 @@ class Dagger implements desert, fruit {
     }
 
     public static void main(String args[]){
-        fruit f = new Dagger();
-        System.out.println(f.fruitName("Mango"));
-        desert d = new Dagger();
-        System.out.println(d.desertName("Baked Alaska"));
+        Fruit fruit = new Dagger();
+        System.out.println(fruit.fruitName("Mango"));
+        Desert desert = new Dagger();
+        System.out.println(desert.desertName("Baked Alaska"));
     }
 }

@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Grand {
 	private int num;
 
-	Grand(int num){
+	public Grand(int num){
 		this.num = num;
 	}
 
@@ -17,10 +17,10 @@ public class Grand {
 	}
 
 	public static void main(String[] args){
-		try(Scanner s = new Scanner(System.in)){
-			Grand d = new Grand(s.nextInt());
+		try(Scanner scanner= new Scanner(System.in)){
+			Grand grand = new Grand(scanner.nextInt());
 			try{
-				d.m();
+				grand.m();
 			}catch (Exception e){
 				System.out.println("Something went wrong");
 				System.exit(0);

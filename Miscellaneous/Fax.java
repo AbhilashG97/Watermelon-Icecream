@@ -1,4 +1,4 @@
-interface kerei {
+interface Kerei {
     void pretty();
 }
 
@@ -8,7 +8,7 @@ class Fax implements Kerei {
     }
 
     public static void main(String[] args){
-        kerei k = new Fax();
-        k.pretty();
+        Kerei kerei = new Fax();
+        kerei.pretty();
     }
 }
