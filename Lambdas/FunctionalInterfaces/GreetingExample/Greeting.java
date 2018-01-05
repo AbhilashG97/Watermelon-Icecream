@@ -1,4 +1,8 @@
 @FunctionalInterface
 public interface Greeting {
-    void sayGreeting();        
+    void sayGreeting();
+    default void sayYahooo(){
+	System.out.println("Yahoo");
+	}
+	        
 }
