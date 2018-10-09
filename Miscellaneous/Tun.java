@@ -1,13 +1,13 @@
-import fish.tuna;
+import fish.Tuna;
 
-class tun extends tuna {
+class Tun extends tuna {
 
     @Override 
     public void geese(){
         System.out.println("This method has been overridden.");
     }
     public static void main(String[] args){
-        tuna t = new tuna();
+        Tuna t = new Tuna();
         t.goose();
         t.geese();
     }

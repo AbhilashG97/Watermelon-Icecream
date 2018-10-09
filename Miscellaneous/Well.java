@@ -1,18 +1,18 @@
-class dry {
+class Dry {
     void m() {
         System.out.println("This is a dry well.");
     }
 }
 
-class pond extends dry {
+class Pond extends Dry {
     void n() {
         System.out.println("This is a well.");
     }
 }
 
-class well {
+class Well {
     public static void main(String[] args){
-        pond a = new pond();
+        Pond a = new Pond();
         a.n();
         a.m();
     }

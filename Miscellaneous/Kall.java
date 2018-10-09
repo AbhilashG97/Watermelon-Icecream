@@ -1,11 +1,11 @@
-interface jilk {
+interface Jilk {
     void pull();
     default void say(){
         System.out.println("There is a saying in English.");
     }
 }
 
-class kam implements jilk {
+class Kam implements Jilk {
     public void pull(){
         System.out.println("This is a print statement.");
     }
@@ -15,9 +15,9 @@ class kam implements jilk {
         System.out.println("There used to be a saying in English.");
     } 
 }   
-class kall extends kam {
+class Kall extends Kam {
     public static void main(String[] args){
-        kam k = new kall();
+        Kam k = new Kall();
         k.say();
         k.pull();
     }

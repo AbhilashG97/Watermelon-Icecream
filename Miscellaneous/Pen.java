@@ -1,4 +1,4 @@
-class froyo {
+class Froyo {
     String cry = "BlueShift";
 
     void say(){
@@ -6,7 +6,7 @@ class froyo {
     }   
 }
 
-class pen extends froyo {
+class Pen extends Froyo {
     String cry = "RedShift";
     void yo(){
     super.say();
@@ -16,7 +16,7 @@ class pen extends froyo {
     }
 
     public static void main(String[] args){
-        pen p = new pen();
+        Pen p = new pen();
         p.say();
         p.yo();
     }

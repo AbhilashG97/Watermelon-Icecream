@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class jilk {
+public class Jilk {
     public static void main(String[] args){
     try(Scanner s = new Scanner(System.in)){
       if(s.nextInt()<5){

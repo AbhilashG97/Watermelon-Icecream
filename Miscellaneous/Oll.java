@@ -1,6 +1,6 @@
 package mypack;
 
-class oll {
+class Oll {
     static void enter(){
         System.out.println("This is a static method.");
     }
@@ -9,8 +9,8 @@ class oll {
         return x*x*x;
     }
     public static void main(String[] args){
-        oll.enter();
-        oll  l = new oll();
+        args.enter();
+        Oll  l = new Oll();
         System.out.println("The cube of 5 is "+l.jack(5));
     }
 };

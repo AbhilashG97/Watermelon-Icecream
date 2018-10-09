@@ -1,5 +1,5 @@
-class bottle {
-    bottle() {
+class Bottle {
+    Bottle() {
         System.out.println("This is a bottle of ");
     }
 
@@ -8,10 +8,10 @@ class bottle {
     }
 }
 
-class rum extends bottle {
+class Rum extends Bottle {
 
     @SuppressWarnings("unchecked")
-    rum(){
+    Rum(){
         super();
         System.out.println("rum.");           
     }
@@ -20,7 +20,7 @@ class rum extends bottle {
         System.out.println("Now, that is not true.");
     }
     public static void main(String[] args){
-        rum r = new rum();
+        Rum r = new rum();
         r.about("HorseShit");
     }
 }

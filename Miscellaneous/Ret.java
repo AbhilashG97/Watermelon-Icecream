@@ -1,11 +1,11 @@
-class mat {
+class Mat {
     int marks=90;
     void text(){
         System.out.println("My marks for the end semester exams are :  "+marks);
     }
 }
 
-class jack extends mat {
+class Jack extends Mat {
     int marks = 200;
     void text(){
         super.text();
@@ -13,7 +13,7 @@ class jack extends mat {
     }
 }
 
-class ret extends jack {
+class Ret extends Jack {
     int marks = 105;
     void text(){
         super.text();
@@ -21,7 +21,7 @@ class ret extends jack {
     }
 
     public static void main(String[] args){
-        jack r = new ret();
+        Jack r = new Ret();
         r.text();
         System.out.println("My marks for the end semester are : "+r.marks);
     }

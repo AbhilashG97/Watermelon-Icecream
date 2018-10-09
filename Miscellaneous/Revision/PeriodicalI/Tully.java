@@ -8,11 +8,11 @@ class Fruit {
     }
 }
 
-class tully {
+class Tully {
     Fruit fruit;
     int plucked_on;
 
-    tully(Fruit fruit, int plucked_on){
+    Tully(Fruit fruit, int plucked_on){
         this.fruit = fruit;
         this.plucked_on = plucked_on;
     }

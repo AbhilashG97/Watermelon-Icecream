@@ -1,8 +1,8 @@
-import names.packagePrac;
+import names.PackagePrac;
 
-class naes {
+class Naes {
     public static void main(String[] args){
-        packagePrac n = new packagePrac();
+        PackagePrac n = new PackagePrac();
         n.setName("Abhilash G");
         System.out.println("My name is "+n.getName());
         n.removeName();

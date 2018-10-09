@@ -1,8 +1,8 @@
-import missy.wail;
+import missy.Wail;
 
-class yale {
+class Yale {
     public static void main(String []args){
-    wail j = new wail();
+    Wail j = new Wail();
     j.york();
     }
 }
