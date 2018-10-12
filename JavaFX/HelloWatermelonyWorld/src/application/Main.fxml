@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: ff5470;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <Label alignment="CENTER" layoutX="122.0" layoutY="41.0" prefHeight="47.0" prefWidth="355.0" style="-fx-text-fill: ffffff;" text="Hello, watermelon-y world!" textAlignment="RIGHT" wrapText="true" AnchorPane.bottomAnchor="312.0" AnchorPane.leftAnchor="122.0" AnchorPane.rightAnchor="122.0" AnchorPane.topAnchor="41.0" />
+      <ImageView fitHeight="260.0" fitWidth="401.0" layoutX="140.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="139.01235961914062" AnchorPane.topAnchor="112.0">
+         <image>
+            <Image url="@../helloWatermelon.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
