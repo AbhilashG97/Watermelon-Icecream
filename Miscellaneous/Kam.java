@@ -1,19 +1,19 @@
-class gun {
+class Gun {
     void yell(){
         System.out.println("This is a random set of string.");
     }
 }
 
 
-class pistol extends gun {
+class Pistol extends Gun {
     void yell(){
         System.out.println("This is a random string about a pistol.");
     }
 }
 
-class kam extends pistol {
+class Kam extends Pistol {
     public static void main(String []args){
-        gun g = new kam();
+        Gun g = new Kam();
         g.yell();
     }
 }

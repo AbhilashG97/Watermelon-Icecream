@@ -1,16 +1,16 @@
-class blue {
-    blue(){
+class Blue {
+    Blue(){
         System.out.println("This is the parent class.");
     }
 }
 
-class agar extends blue {
-    agar(){
+class Agar extends Blue {
+    Agar(){
         super();
         System.out.println("This is the child class.");
     }
 
     public static void main(String []args){
-        agar a = new agar();
+        Agar a = new Agar();
     }
 }

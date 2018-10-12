@@ -1,6 +1,6 @@
 package names;
 
-public class packagePrac {
+public class PackagePrac {
     private String name;
     public void setName (String name){
         this.name = name;

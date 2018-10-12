@@ -1,16 +1,16 @@
-interface jack {
+interface Jack {
     public abstract void print();
 }
 
-class rum implements jack {
+class Rum implements Jack {
      public void print(){
         System.out.println("My name is Jack.");
     }
 }
 
-class kun extends rum{
+class Kun extends Rum{
     public static void main(String []args){
-        jack r = new rum();
+        Jack r = new Rum();
         r.print();
     }
 }

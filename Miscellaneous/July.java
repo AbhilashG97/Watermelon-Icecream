@@ -1,12 +1,12 @@
-class jam {
+class Jam {
     int marks = 45;
 }
 
-class july extends jam {
+class July extends Jam {
     int marks = 100;
 
     public static void main(String[] args){
-        jam j = new july();
+        Jam j = new July();
         System.out.println("This is my marks : "+j.marks);
     }
 }

@@ -1,10 +1,10 @@
-class tummy {
+class Tummy {
     void say(String name){
         System.out.println("This is who I am, and you cannot change that; so you are better off crying.\n- "+name);
     }
 }
 
-class tammy extends tummy{
+class Tammy extends Tummy{
     
     @Override
     void say(String name){
@@ -13,7 +13,7 @@ class tammy extends tummy{
     }
 
     public static void main(String []args){
-        tammy n = new tammy();
+        Tammy n = new Tammy();
         n.say("Luvy");
     }
 }
