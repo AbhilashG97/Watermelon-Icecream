@@ -1,16 +1,16 @@
-class water {
+class Water {
     void talk(){
         System.out.println("This is how I look like I talk.");
     }
 }
 
-class melon extends water {
+class Melon extends Water {
     void talk(){
         System.out.println("Meow");
     }
 
     public static void main(String[] args){
-        melon a = new melon();
+        Melon a = new Melon();
         a.talk();
     }
 }
