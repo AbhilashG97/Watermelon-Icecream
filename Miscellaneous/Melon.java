@@ -1,45 +1,16 @@
-/**
- * Contructor chaining example
- */
-
-class Fruit {
-
-    private String fruitName;
-
-    public Fruit() {
-        //Default
+class Water {
+    void talk(){
+        System.out.println("This is how I look like I talk.");
     }
-
-    public Fruit(String fruitName) {
-        this.fruitName = fruitName;
-    }
-
-    public void sayFruitName() {
-        System.out.println(fruitName);
-    }
-
 }
 
-public class Melon extends Fruit {
-
-    private int price;
-
-    public Melon() {
-        //default
-        this(23);
+class Melon extends Water {
+    void talk(){
+        System.out.println("Meow");
     }
 
-    public Melon(int price) {
-        this.price = price;
-    }
-
-    public void sayPrice() {
-        System.out.println(price);
-    }
-
-    public static void main(String[] args) {
-        Melon melon = new Melon();
-        melon.sayPrice();
-        melon.sayFruitName();
+    public static void main(String[] args){
+        Melon a = new Melon();
+        a.talk();
     }
 }
