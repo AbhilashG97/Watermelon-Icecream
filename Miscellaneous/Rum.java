@@ -20,7 +20,7 @@ class Rum extends Bottle {
         System.out.println("Now, that is not true.");
     }
     public static void main(String[] args){
-        Rum r = new rum();
+        Rum r = new Rum();
         r.about("HorseShit");
     }
 }
