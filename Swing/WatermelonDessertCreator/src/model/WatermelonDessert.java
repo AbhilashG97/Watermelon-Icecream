@@ -2,7 +2,7 @@ package model;
 
 import java.util.ArrayList;
 
-public class WatermelonDesert {
+public class WatermelonDessert {
 
 	public static enum addOns {
 		CREAM,
@@ -17,13 +17,13 @@ public class WatermelonDesert {
 	}
 
 	public static final String[] nuts = new String[] 
-			{"Select nuts", "Pistachio", "Cashew Nut", "Raisins", "Almonds", "Wall Nuts"};
+			{"Select nuts", "Pistachio", "Cashew", "Raisin", "Almond", "Walnut"};
 
 	public static String[] otherFruits = new String[] 
 			{"Select fruits", "Apple", "PineApple", "Orange", "Kiwi", "Litchi", "Grapes"};
 
 	private ArrayList<String> addOnList;
-	private String desertName;
+	private String dessertName;
 	private String recipe;
 	private String selectedExtraFruit;
 	private String selectedNuts;
@@ -32,15 +32,15 @@ public class WatermelonDesert {
 
 
 	// Constructors
-	public WatermelonDesert() {
+	public WatermelonDessert() {
 		super();
 		addOnList = new ArrayList<>();
 	}
 
 
 	// Getters and Setters
-	public String getDesertName() {
-		return desertName;
+	public String getDessertName() {
+		return dessertName;
 	}
 
 	public String getRecipe() {
@@ -59,8 +59,8 @@ public class WatermelonDesert {
 		return selectedServing;
 	}
 
-	public void setDesertName(String desertName) {
-		this.desertName = desertName;
+	public void setDesertName(String dessertName) {
+		this.dessertName = dessertName;
 	}
 
 	public void setRecipe(String recipe) {
@@ -94,7 +94,7 @@ public class WatermelonDesert {
 	public String toString() {
 		
 		StringBuilder stringBuilder = new StringBuilder();
-		stringBuilder.append("Desert Name: "+getDesertName());
+		stringBuilder.append("Dessert Name: "+getDessertName());
 		stringBuilder.append(System.lineSeparator());
 		stringBuilder.append("Serving: "+getSelectedServing());
 		stringBuilder.append(System.lineSeparator());

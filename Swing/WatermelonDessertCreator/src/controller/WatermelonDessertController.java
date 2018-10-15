@@ -9,20 +9,20 @@ import java.nio.file.Paths;
 import javax.swing.JCheckBox;
 import javax.swing.JOptionPane;
 
-import model.WatermelonDesert;
-import view.WatermelonDesertCreatorView;
+import model.WatermelonDessert;
+import view.WatermelonDessertCreatorView;
 
-public class WatermelonDesertController {
+public class WatermelonDessertController {
 		
-	private WatermelonDesert model;
-	private WatermelonDesertCreatorView view;
+	private WatermelonDessert model;
+	private WatermelonDessertCreatorView view;
 	
-	public WatermelonDesertController() {
+	public WatermelonDessertController() {
 		//Default constructor
 		startProgram();
 	}
 	
-	public WatermelonDesertController(WatermelonDesert model, WatermelonDesertCreatorView view) {
+	public WatermelonDessertController(WatermelonDessert model, WatermelonDessertCreatorView view) {
 		super();
 		this.model = model;
 		this.view = view;
@@ -63,11 +63,11 @@ public class WatermelonDesertController {
 			
 			// get serving
 			if(view.getRdbtnSmallServing().isSelected()) {
-				model.setSelectedServing(WatermelonDesert.serving.SMALL.toString());
+				model.setSelectedServing(WatermelonDessert.serving.SMALL.toString());
 			} else if (view.getRdbtnMediumServing().isSelected()){
-				model.setSelectedServing(WatermelonDesert.serving.MEDIUM.toString());
+				model.setSelectedServing(WatermelonDessert.serving.MEDIUM.toString());
 			} else {
-				model.setSelectedServing(WatermelonDesert.serving.LARGE.toString());
+				model.setSelectedServing(WatermelonDessert.serving.LARGE.toString());
 			}
 			
 			// get selected fruit from ComboBox 
@@ -147,7 +147,7 @@ public class WatermelonDesertController {
 	 * @param watermelonDesert
 	 * Writes the recipe to a file which the user can read
 	 */
-	public void writeToFile(WatermelonDesert watermelonDesert) {
+	public void writeToFile(WatermelonDessert watermelonDesert) {
 		
 		File file = null;
 		

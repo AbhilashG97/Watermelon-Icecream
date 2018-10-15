@@ -22,7 +22,7 @@ import javax.swing.JButton;
 import javax.swing.JTextArea;
 import javax.swing.border.EtchedBorder;
 
-import model.WatermelonDesert;
+import model.WatermelonDessert;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
@@ -30,7 +30,7 @@ import javax.swing.ImageIcon;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class WatermelonDesertCreatorView extends JFrame {
+public class WatermelonDessertCreatorView extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtDesertName;
@@ -57,7 +57,7 @@ public class WatermelonDesertCreatorView extends JFrame {
 	/**
 	 * Constructor
 	 */
-	public WatermelonDesertCreatorView() {
+	public WatermelonDessertCreatorView() {
 		initializeComponents();
 		checkBoxList = new ArrayList<>();
 	}
@@ -65,8 +65,8 @@ public class WatermelonDesertCreatorView extends JFrame {
 
 	// Initialize the components of the JFrame
 	private void initializeComponents() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(WatermelonDesertCreatorView.class.getResource("/resources/many_watermelon_512.png")));
-		setTitle("Watermelon Desert Creator");
+		setIconImage(Toolkit.getDefaultToolkit().getImage(WatermelonDessertCreatorView.class.getResource("/resources/many_watermelon_512.png")));
+		setTitle("Watermelon Dessert Creator");
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setBounds(100, 100, 603, 300);
 
@@ -78,7 +78,7 @@ public class WatermelonDesertCreatorView extends JFrame {
 
 		mntmExit = new JMenuItem("Exit");
 
-		mntmExit.setIcon(new ImageIcon(WatermelonDesertCreatorView.class.getResource("/resources/exit18dp.png")));
+		mntmExit.setIcon(new ImageIcon(WatermelonDessertCreatorView.class.getResource("/resources/exit18dp.png")));
 		mnFile.add(mntmExit);
 
 		mnHelp = new JMenu("Help");
@@ -124,9 +124,9 @@ public class WatermelonDesertCreatorView extends JFrame {
 
 		JLabel lblNuts = new JLabel("Nuts:");
 
-		cbxNuts = new JComboBox(WatermelonDesert.nuts);
+		cbxNuts = new JComboBox(WatermelonDessert.nuts);
 
-		cbxFruits = new JComboBox(WatermelonDesert.otherFruits);
+		cbxFruits = new JComboBox(WatermelonDessert.otherFruits);
 
 		btnCreateDessert = new JButton("Create Dessert");
 		
