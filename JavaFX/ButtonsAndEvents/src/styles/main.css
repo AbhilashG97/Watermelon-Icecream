@@ -1,0 +1,16 @@
+#btn_clickMe {
+	-fx-font-size: 2em;
+}
+
+#lbl_showWatermelon {
+	-fx-font-size: 2em;
+	-fx-border-radius: 3px;
+	-fx-border-color: rgb(238,238,236);
+	-fx-text-fill: rgb(238,238,236);
+	-fx-text-alignment: center;
+	-fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.7), 1, 25, 1, 1);
+}
+
+#ap_rootPane {
+	-fx-background-color: rgb(239,41,41);
+}

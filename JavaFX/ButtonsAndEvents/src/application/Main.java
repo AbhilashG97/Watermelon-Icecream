@@ -13,6 +13,7 @@ public class Main extends Application {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("/fxml/Main.fxml"));
 			Scene scene = new Scene(root,600,400);
+			scene.getStylesheets().add("/styles/main.css");
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Watermelon Window");
 			primaryStage.show();

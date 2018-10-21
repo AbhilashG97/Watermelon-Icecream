@@ -11,7 +11,7 @@ import javafx.scene.control.Label;
 public class MainController implements Initializable {
 	
 	@FXML
-	private Label watermelonLabel;
+	private Label lbl_showWatermelon;
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -19,6 +19,6 @@ public class MainController implements Initializable {
 	}
 	
 	public void showWatermelon(ActionEvent event) {
-		watermelonLabel.setText("Watermelon Ice-cream");
+		lbl_showWatermelon.setText("Watermelon Icecream");
 	}
 }
