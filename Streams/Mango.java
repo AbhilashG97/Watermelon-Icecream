@@ -18,12 +18,27 @@ public class Mango {
         return Arrays.stream(array);
     }
 
-    public Stream<String> getStreamFromStringArray(String[] array) {
+    public Stream<String> getStreamFromStringArray(String... array) {
+        return Arrays.stream(array);
+    }
+
+    public Stream<Double> getStreamFromDoubleArray(Double[] array) {
         return Arrays.stream(array);
     }
 
     public Stream<String> someStream() {
         return Stream.of("w","a","t","e","r","m","e","l","o","n");
+    }
+
+    public IntStream getStreamOfChaarctersFromCharacterArray(char[] arr) {
+        return IntStream.generate(() -> arr[0]).limit(10);
+    }
+
+    public IntStream getPrimitiveCharacterStream(char[] characterArray) {
+        return IntStream.builder()
+        .add(characterArray[0])
+        .add(characterArray[1])
+        .build();
     }
 
     public Stream<String> myStreamBuilder(String... args) {
@@ -83,13 +98,35 @@ public class Mango {
     public Stream<String> readASimpleRecipeFile() throws IOException {
         return Files.lines(Paths.get("recipe.txt"));
     }
-    
+
+    public IntStream getPrimitiveIntegerStream(int[] intArray) {
+        return IntStream.of(intArray);
+    }
+
+    public Stream<Character> getStreamOfCharacter(Character[] characterArray) {
+        return Stream.<Character>builder()
+        .add(characterArray[0])
+        .add(characterArray[1])
+        .build();
+    }
+
     public static void main(String[] args) {
         Mango mango = new Mango();
         System.out.println(mango.someStream().toString());
         
         Scanner scanner = new Scanner(System.in);
-        mango.myStreamBuilder("a", "c", "b");
+        // mango.myStreamBuilder(scanner.nextLine().split(" "));
+
+        // mango.getStreamFromStringArray(scanner.nextLine().split(" "));
+
+        // mango.getStreamOfChaarctersFromCharacterArray(scanner.nextLine().toCharArray());
+
+        // mango.getPrimitiveCharacterStream(scanner.nextLine().toCharArray());
+
+        mango.getPrimitiveIntegerStream(new int[]{12, 23, 121, 100});
+
+        mango.getStreamOfCharacter(new Character[]{'a', 'b', 'c', 'z', 'f'});
+
         scanner.close();
     }
 }
