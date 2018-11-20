@@ -33,7 +33,15 @@ public class Lychee {
      * @return Optional<Stream>
      */
     public Optional<Integer> getMultiplesOfThreeOptional(ArrayList<Integer> integerList) {
-        return integerList.stream().findAny();
+        return integerList.stream().findFirst();
+    }
+
+    public ArrayList<Integer> skipElementsAtSpecifiedIndices(ArrayList<String> sourceList, int... indices) {
+        return sourceList.stream()
+                         .map((number) -> Integer.parseInt(number))
+                         .skip(indices[0])
+                         .skip(indices[1])
+                         .collect(Collectors.toCollection(ArrayList<Integer>::new)); 
     }
 
     public static void main(String[] args) {
@@ -56,7 +64,7 @@ public class Lychee {
                                                    .map((number) -> Integer.valueOf(number))
                                                    .collect(Collectors.toCollection(ArrayList::new));
         
-        System.out.println("\nAnother set of even numbers are -\n");
+        System.out.println("\nSet of odd numbers are -\n");
 
         new Lychee().getOddIntegerStream(integerList)
                     .collect(Collectors.toCollection(ArrayList::new))
@@ -66,7 +74,12 @@ public class Lychee {
                     .stream()
                     .collect(Collectors.toCollection(ArrayList<Integer>::new))
                     .forEach(System.out::println);
-                                            
+          
+        // Skip elements example 
+        System.out.println("\nSkipped number list\n");
+        new Lychee().skipElementsAtSpecifiedIndices(numberList, 1, 2)
+                    .forEach(System.out::println);            
+
         numberScanner.close();
         scanner.close();
     }
