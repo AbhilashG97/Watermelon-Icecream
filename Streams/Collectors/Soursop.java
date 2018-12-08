@@ -2,10 +2,10 @@
  * An example to demonstrate the use of Collectors
  * in Java  
  */
-
 import java.util.Scanner;
 import java.util.stream.*;
 import java.util.ArrayList;
+import java.util.*;
 
 /**
  * A simple dessert POJO
@@ -39,20 +39,28 @@ public class Soursop {
         return dessertList.stream();
     }
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        ArrayList<Dessert> dessertList = new ArrayList<>();
-        System.out.println("Enter dessert name and price with a comma inbetween followed by a space for"+
-        " subsequent entries");
-        Scanner dessertScanner = new Scanner(scanner.nextLine());
+    public ArrayList<Dessert> getFilledArrayList(ArrayList<Dessert> arrayList, String input) {
+        Scanner dessertScanner = new Scanner(input);
         dessertScanner.useDelimiter(" ");
         Scanner tempScanner = null;
         while(dessertScanner.hasNext()) {
             tempScanner = new Scanner(dessertScanner.next());
             tempScanner.useDelimiter(",");
-            dessertList.add(new Dessert(new StringBuilder(tempScanner.next()),
-             Integer.parseInt(tempScanner.next())));
+            arrayList.add(new Dessert(new StringBuilder(tempScanner.next()),
+                            Integer.parseInt(tempScanner.next())));
         }
+        dessertScanner.close();
+        return arrayList;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<Dessert> dessertList = new ArrayList<>();
+        System.out.println("Enter dessert name and price with a comma inbetween followed by a space for"+
+        " subsequent entries");
+        String input = scanner.nextLine();
+
+        dessertList = new Soursop().getFilledArrayList(dessertList, input);
 
         /**
          * Reduce all the elements using the joining() method of the
@@ -63,6 +71,7 @@ public class Soursop {
                      .map(Dessert::getDessertName)
                      .collect(Collectors.joining(":", "(", ")"));
         System.out.println("Joined desserts are: "+result);
+
         /**
          * Reduces all the elemenst using the summingInt() method of the
          * Colllectors class
@@ -89,7 +98,7 @@ public class Soursop {
         
 
         /**
-         * Here a stream of dessert is partioned into two lists 
+         * A stream of dessert is partioned into two lists 
          * depending on a condition provided by the predicate 
          * functional interface
          * 
@@ -102,8 +111,83 @@ public class Soursop {
                      .forEach((key, value) -> {
                         System.out.println(key + " " + value);
                      });
+        System.out.println();
 
-        dessertScanner.close();
+        /**
+         * A stream of desserts is grouped by their price 
+         * into maps
+         * 
+         * groupingBy() returns a Map collection whose key is the 
+         * value returned by the functional interface
+         */
+        new Soursop().getDessertStream(dessertList)
+                     .collect(Collectors.groupingBy(Dessert::getDessertPrice))
+                     .forEach((key, value) -> {
+                        System.out.println(key+" "+value);
+                     });
+        System.out.println();
+
+        /**
+         * A stream of desserts is grouped on the basis of their price and then it is mapped 
+         * to the dessert's name using the Collectors.mapping() function.
+         * 
+         * The groupingBy() method takes a Collectors as a second argument, which can contain any 
+         * collector method.  
+         */
+        new Soursop().getDessertStream(dessertList)
+                     .collect(Collectors.groupingBy(Dessert::getDessertPrice,
+                                                    Collectors.mapping(Dessert::getDessertName,
+                                                                       Collectors.toCollection(ArrayList::new))))
+                                                                       .forEach((key, value) -> {
+                                                                           System.out.println(key+" "+value);
+                                                                       });
+        System.out.println();
+
+        /**
+         * Stream of Dessert id collected and grouped by its price and is then reduced to an integer 
+         * value in a map. 
+         * 
+         * The integer value is the sum of all the dessert prices.
+         * 
+         * The reducing() method of the Collectors class takes in 3 parameters which are
+         * similar to the reduce() method. 
+         */
+        new Soursop().getDessertStream(dessertList)
+                     .collect(Collectors.groupingBy(Dessert::getDessertPrice,
+                                                    Collectors.reducing(0, 
+                                                                        Dessert::getDessertPrice,
+                                                                        Integer::sum)))
+                     .forEach((key, value) -> {
+                         System.out.println(key+" "+value);
+                     });
+        System.out.println();
+
+        /**
+         * Stream of Dessert is collected and is grouped on the basis of their price.
+         * It is also reduced to an Integer which is the sum of the 
+         * prices of all the desserts in the stream grouped by their prices.
+         */
+        new Soursop().getDessertStream(dessertList)
+                     .collect(Collectors.groupingBy(Dessert::getDessertPrice,
+                                                    Collectors.summingInt(Dessert::getDessertPrice)))
+                     .forEach((key, value) -> {
+                         System.out.println(key+" "+value);
+                     });
+        System.out.println();
+
+        /**
+         * Stream of Dessert is collected and is grouped on the basis of their price.
+         * It is also reduced to a statistical value which displays the all the statistical
+         * information of the stream.
+         */
+        new Soursop().getDessertStream(dessertList)
+                     .collect(Collectors.groupingBy(Dessert::getDessertPrice, 
+                                                    Collectors.summarizingInt(Dessert::getDessertPrice)))
+                     .forEach((key, value) -> {
+                         System.out.println(key+" "+value);
+                     });
+        System.out.println();
+
         scanner.close();
     }
 }
