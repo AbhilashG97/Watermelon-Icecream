@@ -3,7 +3,7 @@ apply plugin: 'application'
 mainClassName = classToExecute
 
 run{
-    standardInput new FileInputStream("input.dat")
+    standardInput new FileInputStream("input/$inputFile")
 }
 
 repositories {
