@@ -18,4 +18,4 @@ Interference occurs when the source of a stream is modified while a pipeline pro
 
 ## Stateful Lambda Expressions
 
-A stateful lambda expression is one whose result depends on any state that might change during the execution of a pipeline. Its result can vary every time the code is run.
+A stateful lambda expression is one whose result depends on any state that might change during the execution of a pipeline. Its result can vary every time the code is run. 
