@@ -224,6 +224,40 @@ public class Watermelon {
         System.out.println();
 
         /**
+         * The below code shows an example of defaultIfEmpty() operator which returns 
+         * a default value if the observable is empty.
+         * 
+         * In the below example, if the source observable is empty, then a Square Watermelon 
+         * will be returned.
+         */
+        new Watermelon().getFruitObservables(fruitList)
+                        .defaultIfEmpty(new Fruit(new StringBuilder("Square Watermelon"),
+                                        150))
+                        .subscribe(System.out::println,
+                                  Throwable::printStackTrace,
+                                  () -> System.out.println("Completed!"));
+        System.out.println();
+
+        /**
+         * takeWhile() is also a similar operator that takes Predicate as an
+         * argument, but it only allows those events SO LONG AS each item 
+         * satisfied a specified condition.
+         * 
+         * takeWhile() stops sending events on the first occurence of a false 
+         * value.
+         * 
+         * Also, few other examples are as follows : 
+         * Contain, SkipWhile, SkipUntil, TakeUntil
+         */
+        System.out.println("Some cheap fruits : ");
+        new Watermelon().getFruitObservables(fruitList)
+                        .takeWhile((fruit) -> fruit.getFruitPrice() < 50)
+                        .subscribe(System.out::println, 
+                                   Throwable::printStackTrace,
+                                   () -> System.out.println("Completed!!"));
+        System.out.println();
+
+        /**
          * scan() operator is used to accumulate all the values of
          * emitted by a source. 
          * 
