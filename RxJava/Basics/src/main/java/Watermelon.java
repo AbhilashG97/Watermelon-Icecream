@@ -1,7 +1,10 @@
 import io.reactivex.*;
 import java.util.Scanner;
 import java.util.ArrayList;
-
+import io.reactivex.observables.*;
+/**
+ * A simple Fruit POJO.
+ */
 class Fruit {
 
     private StringBuilder fruitName;
@@ -84,6 +87,14 @@ public class Watermelon {
         return nestedFruitList;
     }
 
+    /**
+     * This method returns a ConnectableObservable created from a ArrayList
+     * @param fruitList The source of the ConnectableObservable
+     * @return ConnectableObservable is returned 
+     */
+    public ConnectableObservable<Fruit> getFruitConnectableObservable(ArrayList<Fruit> fruitList) {
+        return Observable.fromIterable(fruitList).publish();
+    }
 
     /**
      * This method takes an empty fruit list and returns an ArrayList filled with Fruits
@@ -106,6 +117,16 @@ public class Watermelon {
         }
         fruitListScanner.close();
         return fruitList;
+    }
+
+    /**
+     * This method returns a Single from an ArrayList of Fruit
+     * @param fruitList The input ArrayList which gets converted to a Single
+     * @return a Single observable which is generated from the input ArrayList
+     */
+    public Single<Fruit> getSingleObservable(ArrayList<Fruit> fruitList) {
+        return Observable.fromIterable(fruitList).first(new Fruit(new StringBuilder("Soursop"),
+                                                        250));     
     }
 
     public static void main(String[] args) {
@@ -155,7 +176,7 @@ public class Watermelon {
          * i.e. Obervable<ArrayList<Fruit>> will be reduced to Observable<Observable<Fruit>> if the 
          * transformation is performed using a map function. 
          * 
-         * FlatMap on the other hand reduces Observable<ArrayList<Fruit>> to Observable<Fruit>; i.e. it flatens
+         * FlatMap on the other hand reduces Observable<ArrayList<Fruit>> to Observable<Fruit>; i.e. it flattens
          * a 2D structure to a 1D structure. 
          */      
         new Watermelon().getObservableStuff(new Watermelon().getFilledNestedFruitList(userInput))
@@ -255,6 +276,41 @@ public class Watermelon {
                         .subscribe(System.out::println, 
                                    Throwable::printStackTrace,
                                    () -> System.out.println("Completed!!"));
+        System.out.println();
+
+        /**
+         * The below code demonstrated the use of ConnectableObservable<T> which only starts 
+         * emitting events when the connect() method is used, unlike the usual Observable which emits
+         * events when the subscribe method is called.
+         * 
+         */
+        ConnectableObservable<Fruit> connectable = new Watermelon().getFruitConnectableObservable(fruitList);
+
+        connectable.subscribe((fruit) -> {
+                                    System.out.println(fruit.toString() + " A");
+                              },
+                              Throwable::printStackTrace,
+                              () -> System.out.println("Completed!! A"));
+    
+
+        connectable.map(Fruit::getFruitName)
+                   .subscribe((fruit) -> {
+                        System.out.println(fruit.toString() + " B");
+                   }, 
+                              Throwable::printStackTrace, 
+                              () -> System.out.println("Completed!! B"));
+                           
+        connectable.connect();
+        System.out.println();
+
+        /**
+         * The following code snippet shows an example of a Single Observable which 
+         * only generates a single event or an error.
+         */
+        new Watermelon().getSingleObservable(fruitList)
+                        .doOnSuccess(System.out::println)
+                        .doOnError(Throwable::printStackTrace)
+                        .subscribe();
         System.out.println();
 
         /**
