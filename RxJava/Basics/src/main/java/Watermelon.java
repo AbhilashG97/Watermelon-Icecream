@@ -59,6 +59,11 @@ public class Watermelon {
         return Observable.fromIterable(nestedFruitList);
     }
 
+    /**
+     * This method fills an ArrayList with an ArrayList of Fruits from an input string.
+     * @param fruits This is the input string
+     * @return returns an filled nested ArrayList of fruits
+     */
     public ArrayList<ArrayList<Fruit>> getFilledNestedFruitList(String fruits) {
         Scanner scanner = new Scanner(fruits);
         scanner.useDelimiter("\n");

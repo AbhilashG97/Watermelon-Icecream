@@ -37,7 +37,41 @@ class Chocolate {
 }
 
 public class DragonFruit {
-    public static void main(String... args) {
 
+    /**
+     * This is a method that fills an ArrayList with chocolates from an input string 
+     * @param input A string which contains chocolates
+     * @param chocolateList an empty ArrayList which will be filled with chocolates
+     * @return an ArrayList filled with chocolates
+     */
+    public ArrayList<Chocolate> getFilledFruitList(String input, ArrayList<Chocolate> chocolateList) {
+        Scanner chocolateListScanner = new Scanner(input);
+        chocolateListScanner.useDelimiter(" "); 
+        
+        Scanner chocolateScanner = null;
+
+        while(chocolateListScanner.hasNext()) {
+            chocolateScanner = new Scanner(chocolateListScanner.next());
+            chocolateScanner.useDelimiter(",");
+
+            chocolateList.add(new Chocolate(new StringBuilder(fruitScanner.next()), 
+                                    Integer.parseInt(fruitScanner.next())));
+        }
+        chocolateListScanner.close();
+        return chocolateList;
+    }
+    public static void main(String... args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Enter the name of the chocolate and the chocolate price separated by a comma "+
+        "followed by a space for subsequent chocolates.");
+
+        StringBuilder result = new StringBuilder("");
+        String userInput = scanner.nextLine();
+
+        ArrayList<Chocolate> chocolateList = new ArrayList<>();
+        chocolateList = new DragonFruit().getFilledDragonList(userInput, chocolateList);
+
+        scanner.close();
     }
 }
