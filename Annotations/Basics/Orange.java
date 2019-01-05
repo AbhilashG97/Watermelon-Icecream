@@ -1,4 +1,4 @@
-@Fruit(name="Orange", price=12f)
+@Fruit(name="Orange", price=12f, desserts={"Orange Cheesecake", "Orange Milkshake", "Zesty Orange Pie"})
 public class Orange {
 
     @Override 

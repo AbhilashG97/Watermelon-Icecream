@@ -66,7 +66,9 @@ Here are some examples of type declarations in annotations :
 
 In order to create an annotation ```@interface``` keyword is used.
 
-:warning: If a default value(s) for an element inside the annotation is not provided, then the user who will be using the annotation will have to provide a value to that element or else compile time error will occur.
+:warning: If a default value for an element inside the annotation is not provided, then the user who will be using the annotation will have to provide a value to that element or else compile time error will occur.
+
+:warning: To create a ```JavaDoc``` of your custom annotation you will have to use the ```@Documented``` annotation with your custom annotation. 
 
 Here is simple example - 
 

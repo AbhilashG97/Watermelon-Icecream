@@ -6,5 +6,5 @@ import java.lang.annotation.Documented;
     String name();
     float price();
     boolean isSweet() default true;
-
+    String[] desserts();
 }
