@@ -15,7 +15,7 @@ A Java annotation can be of the following types -
     ```java
     @Entity(value)
     ```
-    :exclamamtion: If the annotation has only one element then the value can be specified directly inside the parenthesis
+    :exclamation: If the annotation has only one element then the value can be specified directly inside the parenthesis
 1. ```java
     @Entity(
         element1 = value1, 
