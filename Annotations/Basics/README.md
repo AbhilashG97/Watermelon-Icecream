@@ -16,6 +16,8 @@ A Java annotation can be of the following types -
     @Entity(value)
     ```
     :exclamation: If the annotation has only one element then the value can be specified directly inside the parenthesis
+
+    :warning: If however you are using multiple elements and all of the elements have a default value, you will still have to specify the element name, you cannot directly enter the value in the annotation.  
 1. ```java
     @Entity(
         element1 = value1, 
