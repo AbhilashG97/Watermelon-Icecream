@@ -5,4 +5,10 @@ public class Lychee {
     public void sayFruitName(String fruitName) {
         System.out.println(fruitName);
     }
+
+    @Deprecated
+    public void sayWatermelon() {
+        System.out.println("Watermelon!!");
+    }
+
 }
