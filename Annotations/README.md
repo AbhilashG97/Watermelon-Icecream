@@ -10,4 +10,6 @@ Annotations have a number of uses, among them:
 1. **Compile-time and deployment-time processing** — Software tools can process annotation information to generate code, XML files, and so forth.
 1. **Runtime processing** — Some annotations are available to be examined at runtime.
 
-:exclamation: Please refer to [this](https://docs.oracle.com/javase/tutorial/java/annotations/index.html) Java Documentation for more details.
+:warning: Annotations have no effect on a program at runtime. Please note that an annotation does not execute any code or inject any logic that alters the normal behavior of the program.
+
+:warning: Please refer to [this](https://docs.oracle.com/javase/tutorial/java/annotations/index.html) Java Documentation for more details. **Information provided here are taken from various resources**. 
