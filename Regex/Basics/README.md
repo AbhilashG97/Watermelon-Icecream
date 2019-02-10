@@ -51,3 +51,8 @@ Below is the summary of the shortcodes used in Java Regex:
 | \B    |                    A non word boundary                   |
 
 
+:warning:   **Note:** 
+            When ```{n}``` is used the strings should be of size n.
+
+            System.out.println(Pattern.matches("[a-zA-Z0-9]{6}", "JA2Uk2"));  
+            
