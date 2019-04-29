@@ -10,11 +10,13 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 
 /**
  * FXML Controller class
@@ -24,9 +26,9 @@ import javafx.scene.control.TextField;
 public class WatermelonDessertSelectorController implements Initializable {
     
     // Watermelon Dessert Selector
-    @FXML private RadioButton watermelonIcecubesRadioButton;
-    @FXML private RadioButton thinWatermelonShredsRadioButton;
-    @FXML private RadioButton watermelonBallsRadioButton;
+    @FXML private CheckBox watermelonIcecubesCheckBox;
+    @FXML private CheckBox thinWatermelonShredsCheckBox;
+    @FXML private CheckBox watermelonSpheresCheckBox;
     @FXML private TextField extraToppingsTextField;
     @FXML private Button orderButton;
     @FXML private Label orderSummaryLabel;
@@ -40,6 +42,15 @@ public class WatermelonDessertSelectorController implements Initializable {
     @FXML private ComboBox driedFruitsComboBox;
     @FXML private Label driedFruitSummaryLabel;
     
+    // Dessert Awesomeness Level
+    @FXML private RadioButton superAwesomeRadioButton;
+    @FXML private RadioButton awesomeRadioButton;
+    @FXML private RadioButton okayRadioButton;
+    @FXML private RadioButton tastesLikeShitRadioButton;
+    @FXML Label dessertRatingLabel;
+    private ToggleGroup dessertAwesomenessToggleGroup;
+    
+    
     /**
      * Initializes the controller class.
      */
@@ -48,6 +59,7 @@ public class WatermelonDessertSelectorController implements Initializable {
         onOrderButtonPressed();
         initializeChoiceBoxData();
         initializeComboBoxData();
+        initializeToggleGroup();
         onAddFruitButtonClicked();
     }    
     
@@ -59,15 +71,15 @@ public class WatermelonDessertSelectorController implements Initializable {
         orderButton.setOnAction((event) -> {
             String order = "";
             
-            if(watermelonIcecubesRadioButton.isSelected()) {
+            if(watermelonIcecubesCheckBox.isSelected()) {
                 order = order + " Watermelon Icecubes"; 
             }
             
-            if(thinWatermelonShredsRadioButton.isSelected()) {
+            if(thinWatermelonShredsCheckBox.isSelected()) {
                 order = order + " Thin Watermelon Shreds";
             }
                 
-            if(watermelonBallsRadioButton.isSelected()) {
+            if(watermelonSpheresCheckBox.isSelected()) {
                 order = order + " Watermelon Balls";
             }
             
@@ -94,13 +106,44 @@ public class WatermelonDessertSelectorController implements Initializable {
         System.out.println(driedFruitsComboBox.getValue().toString());
     }
     
+    public void onRadioButtonClicked() {
+        if(dessertAwesomenessToggleGroup.getSelectedToggle()
+                .equals(superAwesomeRadioButton)) {
+            dessertRatingLabel.setText("Super Awesome");
+        }
+        
+        if(dessertAwesomenessToggleGroup.getSelectedToggle()
+                .equals(awesomeRadioButton)) {
+            dessertRatingLabel.setText("Awesome");
+        }
+        
+        if(dessertAwesomenessToggleGroup.getSelectedToggle()
+                .equals(okayRadioButton)) {
+            dessertRatingLabel.setText("Okay");
+        }
+        if(dessertAwesomenessToggleGroup.getSelectedToggle()
+                .equals(tastesLikeShitRadioButton)) {
+            dessertRatingLabel.setText("Tastes like shit");
+        }        
+    }
+    
     private void initializeChoiceBoxData() {
+        extraFruitsChoiceBox.setValue("Select Extra Fruit");
         extraFruitsChoiceBox.getItems().add("Lychee");
         extraFruitsChoiceBox.getItems().addAll("Apple", "Mango", "Orange");
     }
     
     private void initializeComboBoxData() {
+        driedFruitsComboBox.setValue("Select a dried fruit");
         driedFruitsComboBox.getItems().add("Raisin");
         driedFruitsComboBox.getItems().addAll("Nut", "Almond", "Prune");
+    }
+    
+    private void initializeToggleGroup() {
+        dessertAwesomenessToggleGroup = new ToggleGroup();
+        superAwesomeRadioButton.setToggleGroup(dessertAwesomenessToggleGroup);
+        awesomeRadioButton.setToggleGroup(dessertAwesomenessToggleGroup);
+        okayRadioButton.setToggleGroup(dessertAwesomenessToggleGroup);
+        tastesLikeShitRadioButton.setToggleGroup(dessertAwesomenessToggleGroup);
     }
 }
