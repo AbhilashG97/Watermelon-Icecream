@@ -1,17 +1,17 @@
-class may {
+class May {
 
     void month(){
         System.out.println("This is the month of May.");
     }
 }
 
-class june extends may {
+class June extends May {
     void month(){
         System.out.println("This is the month of June.");
     }
 }
 
-class march extends may{
+class March extends May{
     void month(){
         System.out.println("This is the month of March.");
     }
