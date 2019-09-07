@@ -1,14 +1,14 @@
-class max {
+class Max {
     String vName;
     double price;
 
-    max(String vName, double price){
+    Max(String vName, double price){
         this.vName = vName;
         this.price = price;
     }
 }
 
-class Vegetable extends max {
+class Vegetable extends Max {
     
     String month;
     String season;
