@@ -8,7 +8,7 @@ Please type the following in the terminal to run the programs :
 <br>
 ```InputFile``` refers to the name of the input file for a program.
 
-### A Useful bash function 
+### A useful bash function 
 
 ```bash
 grun() {
